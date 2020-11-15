@@ -1,0 +1,163 @@
+<!DOCTYPE html> <!-- Tell the browser the type of document = HTML -->
+
+<!-- Language attribute helps with screen readers and search engines. -->
+
+<html lang = "en-US">
+
+<head>
+<!-- Our metadata goes here -->
+
+   <!-- Specify document character encoding using a universal character set that include most languages -->
+
+      <meta charset = "utf-8">
+
+   <!-- Define the author of the page and a concise description. Search engine's may display this description. -->
+
+      <meta name = "author" content = "Hallie Harriman">
+
+      <meta name = "description" content = "Updated website for capstone project -- includes main, about, and description pages.">
+
+   <!-- The title appears in the web page bookmark and page description on browser tab -->
+
+      <title>GHARLIERA</title>
+
+      <link rel = "stylesheet" href = "styles/indexstyle.css">
+
+</head>
+
+<body>
+
+<!-- Our content goes here -->
+<div class = "center">
+	<h1><a class = sansserif><em>GHARLIERA</em></a></h1>
+</div>
+
+<div class = "center">
+<h2><ul>
+	<li><a class = "activenav" href = "index.html">UPDATES</a></li> <!-- Landing Page -->
+	<li><a href = "project.html">PROJECT</a></li> <!-- Information About Current Project -->
+</ul></h2>
+</div>
+
+<main>
+
+  <h2><em>GHARLIERA UPDATE - November 15th, 2020</em></h2>
+    <p><a class = "version">Version 1.0</a></p>
+    <p><strong>The alpha version of GHARLIERA have finally been completed!</strong> -- It will now be accepted into the playtesting stage.</p>
+
+ <!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="images/G1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/G2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/G3.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> 
+
+  <h2><em>GHARLIERA UPDATE - November 10th, 2020</em></h2>
+    <p><a class = "version">Version 0.9</a></p>
+    <p>Added in saving and loading functionality with encryption through the use of JSON. </p>
+    <p>Finished creating the pause menu that can be used to adjust volume, change window size, and exit the game. </p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - November 2nd, 2020</em></h2>
+    <p><a class = "version">Version 0.8</a></p>
+    <p>Created a main menu to the game to provide for future saving, loading, settings, and new game management.</p>
+    <p>Designed panels with animations that will play when the player opens or closes menus.</p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - October 19th, 2020</em></h2>
+    <p><a class = "version">Version 0.7</a></p>
+    <p>Updated the development project from Unity 2017 to Unity 2020 to allow for advanced scripting measures and UI elements.</p>
+    <p>Scrolling text, choice buttons, character prefabs, and background transitions have been implemented.</p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - September 27th, 2020</em></h2>
+    <p><a class = "version">Version 0.6</a></p>
+    <p>Initial project plan has been finalized, providing a weekly outline on the production of GHARLIERA.</p>
+    <p>Included additions ideas for a database element and supplemental web portion to this project.</p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - September 16th, 2020</em></h2>
+    <p><a class = "version">Version 0.5</a></p>
+    <p>Inventory items have been removed from the final concept of the game due to feasible scope.</p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - March 22nd, 2020</em></h2>
+    <p><a class = "version">Version 0.4</a></p>
+    <p>Finalized included inventory items into the game document. There is a total of four items within the world that can be given to specific characters to unlock more unique endings and/or dialogue options.</p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - Febuary 25th, 2020</em></h2>
+    <p><a class = "version">Version 0.3</a></p>
+    <p>Completed Introduction, Dramatic Elements, and Resources for the Game Design Document</p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - Febuary 24th, 2020</em></h2>
+    <p><a class = "version">Version 0.2</a></p>
+    <p>Completed Formal Elements, Gameplay Description and started Media List and Dramatic Elements for the Game Design Document.</p>
+    <p>Character artwork has been added to the <em>PROJECT</em> page along with names of the four characters displayed -- there are more characters, but they will remain hidden until the release of the game.</p>
+  <hr>
+
+  <h2><em>GHARLIERA UPDATE - Febuary 23rd, 2020</em></h2>
+    <p><a class = "version">Version 0.1</a></p>
+    <p>Started initial concept of game.</p>
+</main>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+</script>
+
+<footer>
+	<p><a href = "https://www.instagram.com/gharliera/"><img src = "images/InstagramLogo.png" alt="Instagram" width="25px" height="25px">
+    <em>GHARLIERA Official Instagram Account</em></a></p><!-- Social Media -->
+</footer>
+</body>
+</html>
